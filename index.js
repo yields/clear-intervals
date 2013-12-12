@@ -22,5 +22,4 @@ module.exports = function(){
   tmp = i = setInterval(noop);
   while (prev < i) clearInterval(i--);
   prev = tmp;
-  console.log(prev, i);
 };
