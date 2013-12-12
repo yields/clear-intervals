@@ -1,4 +1,3 @@
-
 /**
  * Clear all intervals.
  *
@@ -7,5 +6,8 @@
 
 module.exports = function(){
   var i = setInterval(function(){});
-  while (i--) clearInterval(i);
+  do {
+    clearInterval(i);
+  }
+  while (i--);
 };
