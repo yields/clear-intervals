@@ -1,11 +1,26 @@
 
 /**
+ * Prev
+ */
+
+var prev = 0;
+
+/**
+ * Noop
+ */
+
+var noop = Function.prototype;
+
+/**
  * Clear all intervals.
  *
  * @api public
  */
 
 module.exports = function(){
-  var i = setInterval(function(){});
-  while (i--) clearInterval(i);
+  var tmp, i;
+  tmp = i = setInterval(noop);
+  while (prev < i) clearInterval(i--);
+  prev = tmp;
+  console.log(prev, i);
 };
